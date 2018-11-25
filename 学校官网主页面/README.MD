@@ -1,4 +1,6 @@
 <h1>学院主页面</h1>
+
+
 * 编写语言：HTML5,CSS,JavaScript
 * 需要框架：jquery-3.3.1.js
 * 功能：
@@ -10,5 +12,7 @@
 * 视图：
 
 <h3>主页面</h3>
+
+
 ![index1](Screen1.png)
 ![index1](Screen2.png)
