@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="js/jquery-3.3.1.js"></script>
+    <script>
+       
+        $(document).ready(function(){
+            $("div.divHead li").click(function(){
+                $(this).addClass("l-cur");
+                $(this).siblings().removeClass("l-cur");
+            });
+        });
+
+        $(document).ready(function(){
+            $("div.divHead li").hover(function(){
+                $(this).children("ul").css("display","block");
+            });
+            $("div.divHead li").mouseleave(function(){
+                $(this).children("ul").css("display","none");
+            });
+        });
+    </script>
+    <style>
+	body{
+	    min-width:1000px;
+	}
+        a{
+            color:black;
+            text-decoration:none;
+        }
+        div.divHead{
+            font-family: 微软雅黑;
+            font-size:25px;
+            background-color:dodgerblue;
+            text-align:center;
+        }
+        div.divHead ul li{
+            list-style-type:none;
+            display:inline-block;
+            width:130px;
+            height:50px;
+            text-align:center;
+        }
+        div.divHead li:hover{
+            background-color:blue;
+        }
+        div.divHead a:link , div.divHead a:visited{
+            color:white;
+            text-decoration:none;
+            line-height:50px;
+        }
+        div.divHead a:active{
+            color:red;
+         }
+
+        div.divHead .l-cur{
+            background-color:blue;
+        }
+        div.divHead .l-cur a{
+            color:palegreen;
+        }
+
+        div.divHead li ul{
+            position:absolute;
+            margin:0;
+            padding:0;
+            background:dodgerblue;
+            color:white;
+            display:none;
+            line-height:50px;
+        }
+	div.divHead li ul li{
+	    display:block;
+	}
+    </style>
+</head>
+<body>
+<div class="divHead">
+    <ul>
+        <li class="l-cur"><a href="#">主页1</a></li>
+        <li><a href="#">主页2</a>
+            <ul style="">
+                <li>二级菜单1</li>
+                <li>二级菜单2</li>
+                <li>二级菜单3</li>
+                <li>二级菜单4</li>
+            </ul>
+        </li>
+        <li><a href="#">主页3</a><ul style="">
+            <li>二级菜单1</li>
+            <li>二级菜单2</li>
+            <li>二级菜单3</li>
+            <li>二级菜单4</li>
+        </ul></li>
+        <li><a href="#">主页4</a><ul style="">
+            <li>二级菜单1</li>
+            <li>二级菜单2</li>
+            <li>二级菜单3</li>
+            <li>二级菜单4</li>
+        </ul></li>
+        <li><a href="#">主页5</a><ul style="">
+            <li>二级菜单1</li>
+            <li>二级菜单2</li>
+            <li>二级菜单3</li>
+            <li>二级菜单4</li>
+        </ul></li>
+        <li><a href="#">主页6</a><ul style="">
+            <li>二级菜单1</li>
+            <li>二级菜单2</li>
+            <li>二级菜单3</li>
+            <li>二级菜单4</li>
+        </ul></li>
+        <li><a href="#">主页7</a><ul style="">
+            <li>二级菜单1</li>
+            <li>二级菜单2</li>
+            <li>二级菜单3</li>
+            <li>二级菜单4</li>
+        </ul></li>
+        <li><a href="#">主页8</a><ul style="">
+            <li>二级菜单1</li>
+            <li>二级菜单2</li>
+            <li>二级菜单3</li>
+            <li>二级菜单4</li>
+        </ul></li>
+    </ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset= utf-8"/>
+    <meta name="Author" cotent="HuiProgramer">
+    <meta name="Blogs" content="http://www.cnbolgs.com/HuiProgramer">
+    <title>title</title>
+</head>
+<body>
+<div id = "source" style = "width:80px;height:80px; border:1px solid black;background-color:#bbb;" draggable="true">
+博客园</div>
+<script type = "text/javascript">
+    var source = document.getElementById("source");
+    source.ondragstart = function (evt) {
+        //让拖动操作携带数据
+        source.dataTransfer.setData("text", "www.cnblogs.com/HuiProgramer");
+    }
+    document.ondragover = function (evt) {
+        //取消事件的默认行为
+        return false;
+    }
+    document.ondrop = function (evt) {
+        source.style.position = "absolute";
+        source.style .left = evt.pageX + "px";
+        source.style.top = evt.pageY + "px";
+        //取消事件的默认行为
+        return false;
+    }
+</script>
+</body>
+</html>

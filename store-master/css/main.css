@@ -1,0 +1,292 @@
+body {
+    font-family: '微软雅黑';
+    color: rgba(34, 29, 15, 0.63);
+    background: #f9f9f9;
+    line-height: 1.5;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #888;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    display: block;
+    max-width: 100%; 
+}
+
+.container {
+    display: block;
+    margin: 0 auto;
+    width: 1080px;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float:right;
+}
+
+.clearf:before,
+.clearf:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9 {
+    display: block;
+    position: relative;
+    float: left;
+}
+
+.col-1 {
+    width: 10%;
+}
+
+.col-2 {
+    width: 20%;
+}
+
+.col-3 {
+    width: 30%; 
+}
+
+.col-4 {
+    width: 40%; 
+}
+
+.col-5 {
+    width: 50%;
+}
+
+.col-6 {
+    width: 60%; 
+}
+
+.col-7 {
+    width: 70%;
+}
+
+.col-8 {
+    width: 80%; 
+}
+
+.col-9 {
+    width: 90%;
+}
+
+.nav {
+    background: #eee;
+    padding: 5px 20px;
+}
+
+.nav .nav-top .item {
+    padding: 10px;
+    font-weight: 500;
+}
+
+.nav .nav-top .item:hover {
+    padding: 10px;
+    font-weight: 700;
+    color: rgba(222, 0, 0, .5);
+    font-weight: 700;
+}
+
+.header {
+    padding: 20px 0;
+}
+
+.header .logo {
+    text-align: center;
+    font-size: 30px;
+    color: #dd182b;
+}
+
+
+.header .search-bar {
+    border: 3px solid #dd182b;
+}
+
+.header .search-bar input,
+.header .search-bar button {
+    display: block;
+    float: left;
+    padding: 8px;
+    border: 0px;
+    outline: 0;
+}
+
+.header .search-bar input {
+    width: 80%;
+}
+
+.header .search-bar button {
+    width:20%;
+    color: #fff;
+    background:#dd182b;
+}
+
+.header .search-bar button:hover {
+    background: rgba(243, 92, 92, 0.966);    
+}
+
+.header .cart a {
+    float: right;
+    padding: 8px;
+    text-align: center;
+    width: 80%;
+    color: #dd182b;
+    background: #fff;
+    border: 2px solid #eee;    
+}
+
+.header .cart a:hover {
+    float: right;
+    padding: 8px;
+    text-align: center;
+    width: 80%;
+    background: #eee;
+    border: 2px solid #fff;   
+}
+
+.main-promote .promote {
+    background: rgb(71, 66, 66);
+}
+
+.main-promote  .promote .item {
+    display: block;
+    padding: 14px 20px;
+    color: #eee;    
+    font-size: 12px;
+}
+
+.main-promote  .promote .item:hover{
+    text-decoration: none;
+    background: rgb(192, 184, 158)
+}
+
+.main-promote .container{
+    background: rgb(241, 245, 210);
+}
+
+.main-promote .info {
+    padding: 10px;
+    background: #fff;
+    color: #888;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+}
+
+.main-promote .info>* {
+    margin-bottom: 10px;
+}
+
+.main-promote .ingo .login {
+   
+}
+
+.main-promote .info .icon {
+}
+
+.main-promote .info .head-icon{
+    margin-right: 20px; 
+    width: 50px;
+    height: 50px;
+    background: #888;
+    border-radius: 50%;
+    line-height: 50px;       
+    
+}
+
+.main-promote .info .icon-right {
+    
+}
+
+.main-promote .info .btns {
+    margin-top: 30px;
+    padding: 0;
+}
+
+.main-promote .info .btn {
+    display: block;
+    float: left;
+    margin-right: 10px;
+    border: 0;
+    background:  #e45667;
+    width: 80px;
+    height: 26px;
+    color: #eee;
+}
+
+.main-promote .info .btn:hover {
+    background: #925058;
+}
+
+.main-promote .info .anno{
+    padding: 0;
+}
+
+.cat-promote {
+}
+
+.cat-promote .cat-pro-header {
+    background: #ddd;
+}
+
+.cat-promote .icon{
+    margin-right: 3px;
+    display: inline-block;
+    background: #e45667;
+    width: 5px;
+    height: 25px;
+    vertical-align: middle;
+}
+
+.cat-promote .title {
+    vertical-align: middle;
+}
+
+.cat-promote .context .item {
+ 
+    padding: 5px;
+}
+
+.cat-promote .context .item .card{
+    background: #ccc;
+    height: 300px;
+    border-radius: 4px;
+}
+
+.footer {
+    padding: 30px;
+    background: #eee;
+    text-align: center;
+    color: #888;
+}
+
+.footer .fcontext {
+    padding: 0px 50px;
+}
+
+
+
+

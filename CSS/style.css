@@ -1,0 +1,25 @@
+/* CSS Document */
+form.search {
+	position:absolute;
+	width:150px;
+	top:23px;
+	right:20px;
+}
+
+.search input {
+	float:right;
+	width:70px;
+	padding:2px 0px 3px 5px;
+	border-radius:10px 0px 10px 0px;
+	font-family:"Source Sans Pro", helvetica, sans-serif;
+	font-weight: 400;
+	font-size:1em;
+	color:#888;
+	outline:none;
+	-webkit-transition:2s width;
+}
+
+.search input:focus {width:140px;}
+.search label {display:none;}
+form.search input {background-color:#fff;}
+form.search input::-webkit-input-placeholder {color:#ccc;}

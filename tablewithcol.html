@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h4>
+    通过CSS设置表格背景色为黑色,单元格之间的间距为1px<br />
+    通过设置背景色为黑色可以实现边框效果
+</h4>
+<table style = "background-color:black;border-collapse:separate;border-spacing:1px;">
+    <caption><b>疯狂Java体系图书</b></caption>
+    <!--定义所有列的背景色都是白色-->
+    <colgroup style = "background-color:white;">
+        <!--设置第一列宽160px-->
+        <col style = "width:160px"/>
+        <!--定义横跨两列，设置这两列各宽100px-->
+        <col span = "2" style = "width:100px">
+    </colgroup>
+    <thead>
+    <tr>
+        <th>书名</th>
+        <th>作者</th>
+        <th>价格</th>
+    </tr>
+    </thead>
+    <tfoot>
+    <tr>
+        <td colspan = "3" style = "text-align:right">现总计：2本图书</td>
+    </tr>
+    </tfoot>
+    <tbody>
+    <tr>
+        <td>疯狂Java讲义</td>
+        <td>李刚</td>
+        <td>109</td>
+    </tr>
+    <tr>
+        <td>轻量级Java EE企业应用实战</td>
+        <td>李刚</td>
+        <td>89</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

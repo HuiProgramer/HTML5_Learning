@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+</head>
+<body>
+<div class="container">
+    <div class="list" style=" left:-600px;">
+        <img src="img/5.jpg">
+        <img src="img/1.jpg">
+        <img src="img/2.jpg">
+        <img src="img/3.jpg">
+        <img src="img/4.jpg">
+        <img src="img/5.jpg">
+        <img src="img/1.jpg">
+    </div>
+    <ul class="dots">
+        <li index=1 class="active dot"></li>
+        <li index=2 class="dot"></li>
+        <li index=3 class="dot"></li>
+        <li index=4 class="dot"></li>
+        <li index=5 class="dot"></li>
+    </ul>
+    <div class="pre"><</div>
+    <div class="next">></div>
+    <style>
+        .container{
+            margin:0 0;/*-----------------------------------修改div放置位置------------------------------------------*/
+            width:600px;
+            height:400px;
+            position: relative;
+            overflow: hidden;
+            border:4px solid gray;
+            box-shadow: 3px 3px 5px gray;
+            border-radius:10px;
+        }
+        .list{
+            width:4200px;
+            height:400px;
+            position: absolute;
+            top:0px;
+        }
+        img{
+            float:left;
+            width:600px;
+            height:400px;
+        }
+        .dots{
+            position: absolute;
+            left:40%;
+            bottom:30px;
+            list-style: none;
+        }
+        .dots li{
+            float:left;
+            width:8px;
+            height:8px;
+            border-radius: 50%;
+            background: gray;
+            margin-left:5px
+        }
+        .dots .active{
+            background: white;
+        }
+        .pre,.next{
+            position: absolute;
+            top:40%;
+            font-size:40px;
+            color:white;
+            text-align:center;
+            background: rgba(128,128,128,0.5);
+            /* display:none;*/
+        }
+        .pre{
+            left:30px;
+        }
+        .next{
+            right:30px;
+        }
+    </style>
+    <script type="text/javascript">
+        var index=1,timer;
+
+        function init(){
+            eventBind();
+            autoPlay();
+        }
+        init();
+        function autoPlay(){
+            timer =setInterval(function () {
+                animation(-600);
+                dotIndex(true);
+            },1000)/*-------------------------------修改图片变换时间------------------------------------------*/
+        }
+        function stopAutoPlay() {
+            clearInterval(timer);
+        }
+        function dotIndex(add){
+            if(add){
+                index++;
+            }
+            else{
+                index--;
+            }
+            if(index>5){
+                index = 1;
+            }
+            if(index<1){
+                index = 5;
+            }
+            dotActive();
+        }
+        function dotActive() {
+            var dots = document.getElementsByClassName("dot");
+            var len = dots.length;
+            for(var i=0 ;i<len ;i++){
+                dots[i].className = "dot";
+            }
+
+            for(var i=0;i<len;i++){
+                /*此处可以不用parseInt，当不用全等时*/
+                if(index === parseInt(dots[i].getAttribute("index"))){
+                    dots[i].className = "dot active";
+                }
+            }
+        }
+        function eventBind(){
+            /*点的点击事件*/
+            var dots = document.getElementsByClassName("dot");
+            var len = dots.length;
+            for(var i=0;i<len;i++){
+                (function(j){
+                    dots[j].onclick = function(e){
+                        var ind = parseInt(dots[j].getAttribute("index"));
+                        animation((index - ind)*(-600));/*显示点击的图片*/
+                        index = ind;
+                        dotActive();
+                    }
+                })(i)
+            }
+            /*容器的hover事件*/
+            var con = document.getElementsByClassName("container")[0];
+            /*鼠标移动到容器上时，停止制动滑动，离开时继续滚动*/
+            con.onmouseover = function (e) {
+                stopAutoPlay();
+            }
+            con.onmouseout =function(e){
+                autoPlay();
+            }
+            /*箭头事件的绑定*/
+            var pre = document.getElementsByClassName("pre")[0];
+            var next = document.getElementsByClassName("next")[0];
+            pre.onclick = function (e) {
+                dotIndex(false);
+                animation(600);
+            }
+            next.onclick = function (e) {
+                dotIndex(true);
+                animation(-600);
+            }
+        }
+        function animation(offset){
+            var lists = document.getElementsByClassName("list")[0];
+            var left = parseInt(lists.style.left.slice(0,lists.style.left.indexOf("p"))) + offset;
+            if(left<-3000){
+                lists.style.left = "-600px";
+            }
+            else if(left>-600){
+                lists.style.left = "-3000px";
+            }
+            else{
+                lists.style.left = left+"px";
+            }
+        }
+    </script>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset= utf-8" />
+    <meta name = "Author" cotent = "HuiProgramer">
+    <meta name = "Blogs" content = "http://www.cnbolgs.com/HuiProgramer">
+    <title>Title</title>
+</head>
+<body>
+<div id = "abc" style = "width:80px;height:80px; border:1px solid black;background-color:#bbb;" draggable="true">
+疯狂软件教育</div>
+<script type = "text/javascript">
+    var abc = document.getElementById("abc");
+    abc.ondragstart = function (ev) {
+        //让拖动操作携带数据
+        abc.dataTransfer.setData("text", "疯狂软件");
+    }
+    document.ondragover = function (ev) {
+        //取消事件的默认行为
+        return false;
+    }
+    document.ondrop = function (ev) {
+        abc.style.position = "absolute";
+        abc.style.left = ev.pageX + "px";
+        abc.style.top = ev.pageY + "px";
+        //取消事件的行为
+        return false;
+    }
+</script>
+</body>
+</html>

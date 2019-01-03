@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        html,body{
+            height:100%;
+        }
+        *{
+            padding:0;
+            margin:0;
+        }
+        div.div_Bottom{
+            position:relative;
+            width:100%;
+            height:60%;
+            overflow:hidden;
+        }
+        div.div_Bottom .bgVideo{
+            width:100%;
+            position:absolute;
+            top:-100px;
+            left:0;
+            z-index:-100;
+        }
+        div.div_Bottom .div_Content{
+            background-color:rgba(255,255,255,0.5);
+            height:100%;
+        }
+        div.div_Bottom .div_Content .div_Seach{
+            position:absolute;
+            top:40%;
+            left:30%;
+            width:40%;
+            height:10%;
+            border:3px dodgerblue solid;
+            background-color:white;
+
+        }
+        div.div_Bottom .div_Content .div_Seach .ipt{
+            width:78%;
+            height:80%;
+            border:none;
+            outline:none;
+            font-size:20px;
+            color:#888888;
+            padding-left:2%;
+        }
+        div.div_Bottom .div_Content .div_Seach .btn{
+            width:20%;
+            height:100%;
+            background-color:dodgerblue;
+            border:none;
+            color:white;
+            font-size:25px;
+        }
+        div.div_Bottom .div_Content .div_Seach .btn:hover{
+            background-color:deepskyblue;
+        }
+        div.div_Bottom .div_Content .div_Seach .btn:active {
+            box-shadow: 0 0 50px gray inset;
+        }
+    </style>
+</head>
+<body>
+<div class="div_Bottom">
+    <video class="bgVideo" src="video/bgVideo.mp4" autoplay loop muted></video>
+    <div class="div_Content">
+        <div class="div_Seach">
+            <input class="ipt" type="text" placeholder="请输入要搜索的内容"/><input class="btn" type="button" value="搜 索"/>
+        </div>
+    </div>
+</div>
+</body>
+</html>
